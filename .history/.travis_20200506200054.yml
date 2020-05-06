@@ -1,8 +1,0 @@
-sudo: required
-services:
-    - docker
-before-install:
-    - docker build -t jayakumar/docker-react .
-script:
-    - docker run -e CI=true jayakumar/docker-react npm run test
-    - language: generic    
